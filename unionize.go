@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"go/format"
 	"go/types"
-	"io/ioutil"
 	"os"
 	"strings"
 
@@ -226,7 +225,7 @@ func main() {
 	}
 
 	if flagFile != nil && *flagFile != "" {
-		ioutil.WriteFile(*flagFile, output, 0666)
+		os.WriteFile(*flagFile, output, 0666)
 	} else {
 		fmt.Print(string(output))
 	}
