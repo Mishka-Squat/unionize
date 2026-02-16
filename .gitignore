@@ -1,3 +1,4 @@
 example/union.go
+example/union_safe.go
 example/example
 unionize
